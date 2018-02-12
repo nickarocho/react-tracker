@@ -8,12 +8,16 @@ const Lane = (props) => {
     // mapping over filtered tasks to create an array of JSX DOM nodes
     let taskList = filteredTasks.map(task => {
         return (
-            <h3>{task.title}</h3>
+            <div key={task.id}>
+                <h2>{task.title}</h2>
+                <p>{task.description}</p>
+            </div>
         )
     })
     
     return (
-        <div>
+        <div className="lane">
+            <h1>{props.laneProgressLevel.toUpperCase()}</h1>
             { taskList }
         </div>
     )

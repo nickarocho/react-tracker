@@ -13,7 +13,7 @@ class Board extends Component {
     render() {
         return (
             <div className="board">
-                {/* <AddTask /> */}
+                <AddTask />
                 <Lane tasks={this.state.tasks} laneProgressLevel="backlog" />
                 <Lane tasks={this.state.tasks} laneProgressLevel="in-progress" />
                 <Lane tasks={this.state.tasks} laneProgressLevel="complete" />
