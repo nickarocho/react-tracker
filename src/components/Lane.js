@@ -11,6 +11,7 @@ const Lane = (props) => {
             <div key={task.id}>
                 <h2>{task.title}</h2>
                 <p>{task.description}</p>
+                <button onClick={() => props.updateState(task.id, task.progressLevel)}>Promote</button>
             </div>
         )
     })
